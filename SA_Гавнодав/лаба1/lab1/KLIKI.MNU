@@ -1,0 +1,25 @@
+Разработка многоуровневого ~состава сложной системы.
+4
+1 Выбор данных
+ 2
+ 0 1 0 Сеть
+ 0 2 11520 Выход  
+0 3 0 Ввод данных!
+0 4 0 Расчет!
+0 5 0 Результат!
+
+2 10 SYSTEM.DSK
+
+3 P.DSK
+  1 '@STD'FILES.EXE KLIKI_.fls
+  2 @EXIT!
+  3 '@INP'INP.EXE KLIK_.cfg DAT\<abcdefgh.ish
+  4 'comspec' /C COPY DAT\<abcdefgh.ish tmp.ish
+  4 KLIKI.EXE 
+  4 'comspec' /c COPY tmp1.dat+tmp.otc tmp.ooo
+  4 'comspec' /c DEL tmp.otc
+  4 'comspec' /c RENAME tmp.ooo tmp.otc
+  4 'comspec' /c COPY tmp.otc DAT\<abcdefgh.otc
+  4 'comspec' /c DEL tmp*.*
+  5 smooth.com DAT\<abcdefgh.otc /C113
+
